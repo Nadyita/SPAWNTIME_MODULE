@@ -58,6 +58,12 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Spec
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Major Woon', null, false, 2*60*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Assault Commander Pax', null, false, 2*60*60);
 
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Brigadier Crux', null, false, 2*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Assault Commander Sleek', null, false, 2*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Chief Gunner Kyle Swan', null, false, 2*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Special Agent Deko', null, false, 2*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Carillion Thunder', null, false, 2*60*60);
+
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Jack Legchopper Clone', 'Soul Swapper', false, 15*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Jack "Leg-Chopper" Menendez', null, false, 18*60*60+10*60);
 
