@@ -155,9 +155,13 @@ class SpawntimeController {
 				explode(" ", $args[1])
 			);
 			$sql = "SELECT * FROM spawntime WHERE ";
-			$parts = array_fill(0, count($tokens), "mob LIKE ?");
-			$sql .= join(" AND ", $parts)." ORDER BY mob ASC";
-			$allTimes = $this->db->query($sql, ...$tokens);
+			$partsMob = array_fill(0, count($tokens), "mob LIKE ?");
+			$partsPlaceholder = array_fill(0, count($tokens), "placeholder LIKE ?");
+			$sql .= "(" . join(" AND ", $partsMob).")".
+				" OR ".
+				"(" . join(" AND ", $partsPlaceholder) . ") ".
+				"ORDER BY mob ASC";
+			$allTimes = $this->db->query($sql, ...array_merge($tokens, $tokens));
 		} else {
 			$sql = "SELECT * FROM spawntime ORDER BY mob ASC";
 			$allTimes = $this->db->query($sql);
@@ -177,7 +181,9 @@ class SpawntimeController {
 			$allTimes
 		);
 		$timeLines = array_map([$this,'getMobLine'], $allTimes);
-		if (count($timeLines) < 4 && (strlen($args[1]) > 0)) {
+		if (count($timeLines) === 1) {
+			$msg = $timeLines[0];
+		} elseif (count($timeLines) < 4 && (strlen($args[1]) > 0)) {
 			$msg = "Spawntimes matching <highlight>" . $args[1] . "<end>:\n".
 				join("\n", $timeLines);
 		} else {
