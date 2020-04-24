@@ -83,7 +83,6 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Sile
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Spiritual Prisoner', null, false, 15*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Temporal Prisoner', null, false, 15*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Umbral Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Umbral Prisoner', null, false, 15*60);
 
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Prototype A-9000 Guardbot', null, false, null);
 
