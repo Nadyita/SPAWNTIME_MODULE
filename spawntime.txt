@@ -1,0 +1,6 @@
+To show the (re)spawntime for a certain mob: <highlight><symbol>spawn &lt;name of the mob&gt;<end>.
+<highlight><tab><symbol>spawn wardog<end>
+
+<header>Result:<end>
+Spawntimes matching <highlight>Wardog<end>:
+<highlight>Wardog<end>: <orange>10m<end>
