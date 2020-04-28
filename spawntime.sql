@@ -8,21 +8,21 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ward
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Otacustes', 'Primus &lt;something&gt;', false, 15*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Mick Nugget McMullet', null, false, 20*60);
 
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Joo', null, false, 18*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Polly', null, false, 18*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Oscar', null, false, 18*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Stumpy', null, false, 18*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ownz', null, false, 18*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Morty', null, false, 18*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Cuty', null, false, 18*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('George', null, false, 18*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Powa', null, false, 18*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Joo', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Polly', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Oscar', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Stumpy', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ownz', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Morty', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Cuty', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('George', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Powa', null, false, 20*60);
 
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Torrith the Ancient', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Daria Marie Walzer', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('R-2000 Vermin Disposal Unit', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Kelly Frederickson', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Professor Van Horn', null, false, null);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Professor Van Horn', null, true, 20*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Marcus Robicheaux', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Frank Kaehler', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The Escaped Gargantula', null, false, null);
@@ -103,6 +103,10 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Gene
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('General Nirtox', null, false, 10*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('General Kronillis', null, false, 10*60);
 
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ressurecting Swamp Hag', null, false, null);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ressurecting Swamp Hag', null, false, 2*60*60);
 
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Mantis Queen', null, false, 35*60);
+
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Arachnis', null, false, null);
+
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Unicorn Access Supervisor', null, false, 60*60);
