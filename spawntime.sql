@@ -67,15 +67,15 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Cari
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Jack Legchopper Clone', 'Soul Swapper', false, 15*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Jack "Leg-Chopper" Menendez', null, false, 18*60*60+10*60);
 
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Trash King', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Trash King Lackey', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Electro Unique', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Nuts & Bolts', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Greasy Joints', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Live Metal', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Best in Brass', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Metalomania', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Galvano', null, false, null);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Trash King', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Trash King Lackey', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Electro Unique', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Nuts & Bolts', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Greasy Joints', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Live Metal', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Best in Brass', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Metalomania', null, false, 20*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Galvano', null, false, 20*60);
 
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Acidic Prisoner', null, false, 15*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Burning Prisoner', null, false, 15*60);
