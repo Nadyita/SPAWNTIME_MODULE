@@ -20,7 +20,7 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Powa
 
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Torrith the Ancient', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Daria Marie Walzer', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('R-2000 Vermin Disposal Unit', null, false, null);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('R-2000 Vermin Disposal Unit', null, false, 20*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Kelly Frederickson', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Professor Van Horn', null, true, 20*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Marcus Robicheaux', null, false, null);
@@ -110,3 +110,8 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Mant
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Arachnis', null, false, null);
 
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Unicorn Access Supervisor', null, false, 60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The Curator', null, false, 10*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Guardian of Tomorrow', null, false, 10*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Lien the Memorystalker', null, false, 10*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Defender of the Three', null, false, 10*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Gartua the Doorkeeper', null, false, 10*60);
