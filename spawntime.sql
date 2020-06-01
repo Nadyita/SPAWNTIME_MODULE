@@ -18,6 +18,8 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Cuty
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('George', null, false, 20*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Powa', null, false, 20*60);
 
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Cenobite Shadow', null, false, 60*60);
+
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Torrith the Ancient', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Daria Marie Walzer', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('R-2000 Vermin Disposal Unit', null, false, 20*60);
