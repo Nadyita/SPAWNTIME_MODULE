@@ -117,3 +117,8 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Guar
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Lien the Memorystalker', null, false, 10*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Defender of the Three', null, false, 10*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Gartua the Doorkeeper', null, false, 10*60);
+
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Loren Warr', null, false, 9*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The Hollow Reaper', null, false, 9*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Desert Nomad Commando', null, false, 2*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ganking Uncle Pumpkin-Head', null, false, null);
