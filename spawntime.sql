@@ -23,10 +23,10 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ceno
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Torrith the Ancient', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Daria Marie Walzer', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('R-2000 Vermin Disposal Unit', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Kelly Frederickson', null, false, null);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Commander Kelly Frederickson', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Professor Van Horn', null, true, 20*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Marcus Robicheaux', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Frank Kaehler', null, false, null);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Colonel Frank Kaehler', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The Escaped Gargantula', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The Iron Reet', null, false, null);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Elian Zuwadza', null, false, null);
@@ -48,11 +48,13 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Cybo
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Warchief Skawt', null, false, 10*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Abandoned Hope', null, false, 1*60*60);
 
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Xark', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Razor', null, false, null);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Xark the Battletoad', null, false, 2*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Razor the Battletoad', null, false, 2*60*60);
 
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('A Sapling', null, false, 3*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Biodome Warden', null, false, 1*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Research Dome 1 Warden', null, false, 1*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Research Dome 2 Warden', null, false, 1*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Research Dome 3 Warden', null, false, 1*60*60);
 
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Peal Thunder', null, false, 2*60*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Force Recon Commander 191', null, false, 2*60*60);
@@ -105,7 +107,7 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Gene
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('General Nirtox', null, false, 10*60);
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('General Kronillis', null, false, 10*60);
 
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ressurecting Swamp Hag', null, false, 2*60*60);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Resurrecting Swamp Hag', null, false, 2*60*60);
 
 INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Mantis Queen', null, false, 35*60);
 

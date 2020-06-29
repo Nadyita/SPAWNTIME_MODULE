@@ -53,18 +53,31 @@ class SpawntimeController {
 		// load database tables from .sql-files
 		$this->db->loadSQLFile($this->moduleName, 'spawntime');
 	}
+
+	public function getLocationBlob(Spawntime $spawntime) {
+		$blob = '';
+		foreach ($spawntime->coordinates as $row) {
+			$blob .= "<header2>$row->name<end>\n$row->answer";
+			if ($row->playfield_id != 0 && $row->xcoord != 0 && $row->ycoord != 0) {
+				$blob .= " " . $this->text->makeChatcmd("waypoint: {$row->xcoord}x{$row->ycoord} {$row->short_name}", "/waypoint {$row->xcoord} {$row->ycoord} {$row->playfield_id}");
+			}
+			$blob .= "\n\n";
+		}
+		$msg = $this->text->makeBlob("locations (" . count($spawntime->coordinates).")", $blob);
+		return $msg;
+	}
 	
 	/**
 	 * Return the formatted entry for one mob
 	 */
-	protected function getMobLine(DBEntry $row): string {
+	protected function getMobLine(Spawntime $row, $displayDirectly): string {
 		$line = "<highlight>" . $row->mob . "<end>: ";
 		if ($row->spawntime !== null) {
 			$line .= "<orange>" . strftime('%Hh%Mm%Ss', $row->spawntime) . "<end>";
 		} else {
 			$line .= "<orange>&lt;unknown&gt;<end>";
 		}
-		$line = preg_replace('/(00h|00s|00m)/', '', $line);
+		$line = preg_replace('/00[hms]/', '', $line);
 		$line = preg_replace('/>0/', '>', $line);
 		$flags = [];
 		if ($row->can_skip_spawn) {
@@ -75,6 +88,26 @@ class SpawntimeController {
 		}
 		if (count($flags)) {
 			$line .= ' (' . join(', ', $flags) . ')';
+		}
+		if ($displayDirectly === true && count($row->coordinates)) {
+			$line .= " [" . $this->getLocationBlob($row) . "]";
+		} elseif (count($row->coordinates) > 1) {
+			$line .= " [" .
+				$this->text->makeChatcmd(
+					"locations (" . count($row->coordinates) . ")",
+					"/tell <myname> whereis " . $row->mob
+				).
+				"]";
+		} elseif (count($row->coordinates) === 1) {
+			$coords = $row->coordinates[0];
+			if ($coords->playfield_id != 0 && $coords->xcoord != 0 && $coords->ycoord != 0) {
+				$line .= " [".
+					$this->text->makeChatcmd(
+						"{$coords->xcoord}x{$coords->ycoord} {$coords->short_name}",
+						"/waypoint {$coords->xcoord} {$coords->ycoord} {$coords->playfield_id}"
+					).
+					"]";
+			}
 		}
 		return $line;
 	}
@@ -154,7 +187,16 @@ class SpawntimeController {
 				},
 				explode(" ", $args[1])
 			);
-			$sql = "SELECT * FROM spawntime WHERE ";
+			$sql = "SELECT s.*, w.*, p.short_name, p.long_name ".
+				"FROM spawntime s ".
+				"LEFT JOIN whereis w ON ";
+			if ($this->db->getType() === $this->db::MYSQL) {
+				$sql .= "(LOWER(w.name) LIKE CONCAT(LOWER(s.mob), '%'))";
+			} else {
+				$sql .= "(LOWER(w.name) LIKE LOWER(s.mob) || '%')";
+			}
+			$sql .= " LEFT JOIN playfields p ON (p.id=w.playfield_id) ".
+				"WHERE ";
 			$partsMob = array_fill(0, count($tokens), "mob LIKE ?");
 			$partsPlaceholder = array_fill(0, count($tokens), "placeholder LIKE ?");
 			$sql .= "(" . join(" AND ", $partsMob).")".
@@ -174,16 +216,31 @@ class SpawntimeController {
 			$sendto->reply($msg);
 			return;
 		}
-		$allTimes = array_map(
-			function(\Budabot\Core\DBRow $row) {
-				return new DBEntry($row);
-			},
-			$allTimes
+		$oldMob = null;
+		$allData = array();
+		foreach ($allTimes as $data) {
+			if ($oldMob !== null && $oldMob->mob !== $data->mob) {
+				$allData []= $oldMob;
+				$oldMob = null;
+			}
+			if ($oldMob === null) {
+				$oldMob = new Spawntime($data);
+			}
+			if (strlen($args[1]) > 0) {
+				$oldMob->coordinates []= new WhereisCoordinates($data);
+			}
+		}
+		$allData []= $oldMob;
+		$allTimes = $allData;
+		$displayDirectly = count($allTimes) < 4 && (strlen($args[1]) > 0);
+		$timeLines = array_map(
+			[$this,'getMobLine'],
+			$allTimes,
+			array_fill(0, count($allTimes), $displayDirectly)
 		);
-		$timeLines = array_map([$this,'getMobLine'], $allTimes);
 		if (count($timeLines) === 1) {
 			$msg = $timeLines[0];
-		} elseif (count($timeLines) < 4 && (strlen($args[1]) > 0)) {
+		} elseif ($displayDirectly) {
 			$msg = "Spawntimes matching <highlight>" . $args[1] . "<end>:\n".
 				join("\n", $timeLines);
 		} else {
@@ -193,7 +250,7 @@ class SpawntimeController {
 	}
 }
 
-class DBEntry {
+class Spawntime {
 	/** @var string $mob */
 	public $mob;
 
@@ -206,10 +263,50 @@ class DBEntry {
 	/** @var int $spawntime */
 	public $spawntime;
 
+	/** @var \Budabot\User\Modules\WhereisCoordinates */
+	public $coordinates = array();
+
 	public function __construct(\Budabot\Core\DBRow $row) {
 		$this->mob = $row->mob;
 		$this->placeholder = $row->placeholder;
 		$this->can_skip_spawn = (bool)$row->can_skip_spawn;
 		$this->spawntime = $row->spawntime ? (int)$row->spawntime : null;
+	}
+}
+
+class WhereisCoordinates {
+	/** @var string */
+	public $name;
+
+	/** @var string */
+	public $answer;
+
+	/** @var string */
+	public $keywords;
+
+	/** @var int */
+	public $playfield_id;
+
+	/** @var string */
+	public $short_name;
+
+	/** @var string */
+	public $long_name;
+
+	/** @var int */
+	public $xcoord;
+
+	/** @var int */
+	public $ycoord;
+
+	public function __construct(\Budabot\Core\DBRow $row) {
+		$this->name = $row->name;
+		$this->answer = $row->answer;
+		$this->keywords = $row->keywords;
+		$this->playfield_id = $row->playfield_id;
+		$this->xcoord = $row->xcoord;
+		$this->ycoord = $row->ycoord;
+		$this->short_name = $row->short_name;
+		$this->long_name = $row->long_name;
 	}
 }
