@@ -1,10 +1,10 @@
 <?php
 
-namespace Budabot\User\Modules;
-
-use Budabot\Core\CommandReply;
+namespace Budabot\User\Modules\SPAWNTIME_MODULE;
 
 /**
+ * @author Nadyita (RK5) <nadyita@hodorraid.org>
+ *
  * @Instance
  *
  * Commands this controller contains:
