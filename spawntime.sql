@@ -1,126 +1,111 @@
 DROP TABLE IF EXISTS spawntime;
-CREATE TABLE IF NOT EXISTS spawntime(mob VARCHAR(50) PRIMARY KEY, placeholder VARCHAR(50), can_skip_spawn BOOLEAN, spawntime INT);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ljotur the Lunatic', 'Polymorphed Lunatic', false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The Pest', 'Rotten Plague', false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The One', 'Harbinger of the One', true, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Special Agent Lamb', 'Lamb''s Apprentice', false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Wardog', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Otacustes', 'Primus &lt;something&gt;', false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Mick Nugget McMullet', null, false, 20*60);
+CREATE TABLE IF NOT EXISTS spawntime(
+	mob VARCHAR(50) PRIMARY KEY,
+	placeholder VARCHAR(50),
+	can_skip_spawn BOOLEAN,
+	spawntime INT
+);
 
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Joo', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Polly', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Oscar', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Stumpy', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ownz', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Morty', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Cuty', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('George', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Powa', null, false, 20*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Cenobite Shadow', null, false, 60*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Torrith the Ancient', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Daria Marie Walzer', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('R-2000 Vermin Disposal Unit', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Commander Kelly Frederickson', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Professor Van Horn', null, true, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Marcus Robicheaux', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Colonel Frank Kaehler', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The Escaped Gargantula', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The Iron Reet', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Elian Zuwadza', null, false, null);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Omni-Pol Command Juggernaut', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('M.A.G.S.', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('High Commander Riker', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Tarasque', null, false, 9*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Tri Plumbo', null, false, 10*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Notum Soldier', 'Notum Trainee', false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Diamondine Soldier', 'Diamondine Trainee', false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Obediency Enforcer', 'Obediency Inspector', false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Fiery Soldier', 'Fiery Trainee', false, 15*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Prime Evolution Huzzum', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Lord of Sand', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Cyborg Executioner', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Warchief Skawt', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Abandoned Hope', null, false, 1*60*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Xark the Battletoad', null, false, 2*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Razor the Battletoad', null, false, 2*60*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('A Sapling', null, false, 3*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Research Dome 1 Warden', null, false, 1*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Research Dome 2 Warden', null, false, 1*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Research Dome 3 Warden', null, false, 1*60*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Peal Thunder', null, false, 2*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Force Recon Commander 191', null, false, 2*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Special Agent Moxy', null, false, 2*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Major Woon', null, false, 2*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Assault Commander Pax', null, false, 2*60*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Brigadier Crux', null, false, 2*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Assault Commander Sleek', null, false, 2*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Chief Gunner Kyle Swan', null, false, 2*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Special Agent Deko', null, false, 2*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Carillion Thunder', null, false, 2*60*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Jack Legchopper Clone', 'Soul Swapper', false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Jack "Leg-Chopper" Menendez', null, false, 18*60*60+10*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Trash King', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Trash King Lackey', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Electro Unique', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Nuts & Bolts', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Greasy Joints', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Live Metal', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Best in Brass', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Metalomania', null, false, 20*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Galvano', null, false, 20*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Acidic Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Burning Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Dangerous Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Deadly Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Diseased Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Explosive Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Murderous Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Poisonous Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Silenced Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Spiritual Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Temporal Prisoner', null, false, 15*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Umbral Prisoner', null, false, 15*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Prototype A-9000 Guardbot', null, false, null);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Supply Master Smug', null, false, 3*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Supply Master Eel', null, false, 3*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('High Commander Fredrickson', null, false, 3*60*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Clan Modified A-4000', null, false, null);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Clan Modified A-4001', null, false, null);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('General Vivyan', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('General Nirtox', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('General Kronillis', null, false, 10*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Resurrecting Swamp Hag', null, false, 2*60*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Mantis Queen', null, false, 35*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Arachnis', null, false, null);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Unicorn Access Supervisor', null, false, 60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The Curator', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Guardian of Tomorrow', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Lien the Memorystalker', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Defender of the Three', null, false, 10*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Gartua the Doorkeeper', null, false, 10*60);
-
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Loren Warr', null, false, 9*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('The Hollow Reaper', null, false, 9*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Desert Nomad Commando', null, false, 2*60*60);
-INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES ('Ganking Uncle Pumpkin-Head', null, false, null);
+INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES
+('Ljotur the Lunatic', 'Polymorphed Lunatic', false, 15*60),
+('The Pest', 'Rotten Plague', false, 15*60),
+('The One', 'Harbinger of the One', true, 20*60),
+('Special Agent Lamb', 'Lamb''s Apprentice', false, 15*60),
+('Wardog', null, false, 10*60),
+('Otacustes', 'Primus &lt;something&gt;', false, 15*60),
+('Mick Nugget McMullet', null, false, 20*60),
+('Joo', null, false, 20*60),
+('Polly', null, false, 20*60),
+('Oscar', null, false, 20*60),
+('Stumpy', null, false, 20*60),
+('Ownz', null, false, 20*60),
+('Morty', null, false, 20*60),
+('Cuty', null, false, 20*60),
+('George', null, false, 20*60),
+('Powa', null, false, 20*60),
+('Cenobite Shadow', null, false, 60*60),
+('Torrith the Ancient', null, false, null),
+('Daria Marie Walzer', null, false, null),
+('R-2000 Vermin Disposal Unit', null, false, 20*60),
+('Commander Kelly Frederickson', null, false, null),
+('Professor Van Horn', null, true, 20*60),
+('Marcus Robicheaux', null, false, null),
+('Colonel Frank Kaehler', null, false, null),
+('The Escaped Gargantula', null, false, null),
+('The Iron Reet', null, false, null),
+('Elian Zuwadza', null, false, null),
+('Omni-Pol Command Juggernaut', null, false, null),
+('M.A.G.S.', null, false, 10*60),
+('High Commander Riker', null, false, 10*60),
+('Tarasque', null, false, 9*60*60),
+('Tri Plumbo', null, false, 10*60),
+('Notum Soldier', 'Notum Trainee', false, 20*60),
+('Diamondine Soldier', 'Diamondine Trainee', false, 20*60),
+('Obediency Enforcer', 'Obediency Inspector', false, 15*60),
+('Fiery Soldier', 'Fiery Trainee', false, 15*60),
+('Prime Evolution Huzzum', null, false, 20*60),
+('Lord of Sand', null, false, 20*60),
+('Cyborg Executioner', null, false, 10*60),
+('Warchief Skawt', null, false, 10*60),
+('Abandoned Hope', null, false, 1*60*60),
+('Xark the Battletoad', null, false, 2*60*60),
+('Razor the Battletoad', null, false, 2*60*60),
+('A Sapling', null, false, 3*60*60),
+('Research Dome 1 Warden', null, false, 1*60*60),
+('Research Dome 2 Warden', null, false, 1*60*60),
+('Research Dome 3 Warden', null, false, 1*60*60),
+('Peal Thunder', null, false, 2*60*60),
+('Force Recon Commander 191', null, false, 2*60*60),
+('Special Agent Moxy', null, false, 2*60*60),
+('Major Woon', null, false, 2*60*60),
+('Assault Commander Pax', null, false, 2*60*60),
+('Brigadier Crux', null, false, 2*60*60),
+('Assault Commander Sleek', null, false, 2*60*60),
+('Chief Gunner Kyle Swan', null, false, 2*60*60),
+('Special Agent Deko', null, false, 2*60*60),
+('Carillion Thunder', null, false, 2*60*60),
+('Jack Legchopper Clone', 'Soul Swapper', false, 15*60),
+('Jack "Leg-Chopper" Menendez', null, false, 18*60*60+10*60),
+('Trash King', null, false, 20*60),
+('Trash King Lackey', null, false, 20*60),
+('Electro Unique', null, false, 20*60),
+('Nuts & Bolts', null, false, 20*60),
+('Greasy Joints', null, false, 20*60),
+('Live Metal', null, false, 20*60),
+('Best in Brass', null, false, 20*60),
+('Metalomania', null, false, 20*60),
+('Galvano', null, false, 20*60),
+('Acidic Prisoner', null, false, 15*60),
+('Burning Prisoner', null, false, 15*60),
+('Dangerous Prisoner', null, false, 15*60),
+('Deadly Prisoner', null, false, 15*60),
+('Diseased Prisoner', null, false, 15*60),
+('Explosive Prisoner', null, false, 15*60),
+('Murderous Prisoner', null, false, 15*60),
+('Poisonous Prisoner', null, false, 15*60),
+('Silenced Prisoner', null, false, 15*60),
+('Spiritual Prisoner', null, false, 15*60),
+('Temporal Prisoner', null, false, 15*60),
+('Umbral Prisoner', null, false, 15*60),
+('Prototype A-9000 Guardbot', null, false, null),
+('Supply Master Smug', null, false, 3*60*60),
+('Supply Master Eel', null, false, 3*60*60),
+('High Commander Fredrickson', null, false, 3*60*60),
+('Clan Modified A-4000', null, false, null),
+('Clan Modified A-4001', null, false, null),
+('General Vivyan', null, false, 5*60),
+('General Nirtox', null, false, 10*60),
+('General Kronillis', null, false, 10*60),
+('Resurrecting Swamp Hag', null, false, 2*60*60),
+('Mantis Queen', null, false, 35*60),
+('Arachnis', null, false, null),
+('Unicorn Access Supervisor', null, false, 60*60),
+('The Curator', null, false, 10*60),
+('Guardian of Tomorrow', null, false, 10*60),
+('Lien the Memorystalker', null, false, 10*60),
+('Defender of the Three', null, false, 10*60),
+('Gartua the Doorkeeper', null, false, 10*60),
+('Loren Warr', null, false, 9*60*60),
+('The Hollow Reaper', null, false, 9*60*60),
+('Desert Nomad Commando', null, false, 2*60*60),
+('Ganking Uncle Pumpkin-Head', null, false, null);
