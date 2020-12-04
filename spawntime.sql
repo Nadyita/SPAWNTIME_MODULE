@@ -98,7 +98,6 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES
 ('General Kronillis', null, false, 10*60),
 ('Resurrecting Swamp Hag', null, false, 2*60*60),
 ('Mantis Queen', null, false, 35*60),
-('Arachnis', null, false, null),
 ('Unicorn Access Supervisor', null, false, 60*60),
 ('The Curator', null, false, 10*60),
 ('Guardian of Tomorrow', null, false, 10*60),

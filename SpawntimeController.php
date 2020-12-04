@@ -7,6 +7,7 @@ use Nadybot\Core\DB;
 use Nadybot\Core\LoggerWrapper;
 use Nadybot\Core\Text;
 use Nadybot\Core\Util;
+use Nadybot\Modules\WHEREIS_MODULE\WhereisCoordinates;
 
 /**
  * @author Nadyita (RK5) <nadyita@hodorraid.org>
