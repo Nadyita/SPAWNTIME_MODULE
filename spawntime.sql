@@ -43,7 +43,7 @@ INSERT INTO spawntime(mob, placeholder, can_skip_spawn, spawntime) VALUES
 ('Diamondine Soldier', 'Diamondine Trainee', false, 20*60),
 ('Obediency Enforcer', 'Obediency Inspector', false, 15*60),
 ('Fiery Soldier', 'Fiery Trainee', false, 15*60),
-('Prime Evolution Huzzum', null, false, 20*60),
+('Prime Evolution Huzzum', null, false, 2*60),
 ('Lord of Sand', null, false, 20*60),
 ('Cyborg Executioner', null, false, 10*60),
 ('Warchief Skawt', null, false, 10*60),
